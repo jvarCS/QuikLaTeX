@@ -1,8 +1,33 @@
 body {
-    background: red;
+    /* background: red; */
+    margin: 0;
+}
+
+.landing {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    /* background: blue; */
+    /* z-index: 1; */
+}
+
+.landing-title {
+    font-size: 150px;
+    color: black;
+}
+
+.landing-upload {
+    font-size: 35px;
+    color: black;
 }
 
 .nav {
+    z-index: 10;
     position: fixed;
     width: 200px;
     /* height: 50%; */
