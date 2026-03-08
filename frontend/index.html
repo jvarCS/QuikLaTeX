@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuikLaTeX Live Preview</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- PDF.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+
+</head>
+
+<body>
+
+
+<h1>QuikLaTeX Live Preview</h1>
+
+<div class="buttons">
+    <button id="compile">Compile</button>
+    <input id="fileUpload" type="file">
+</div>
+
+<div class="screens">
+<textarea class="editor" id="editor">
+\documentclass{article}
+\begin{document}
+Hello World
+\end{document}
+</textarea>
+
+    <div class="pdf-container" id="pdf-container"></div>
+</div>
+
+
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
