@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@300;400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Mono', monospace;
+  background: #0e0e0e;
+  color: #f0ede6;
+}
+
+.dashboard { min-height: 100vh; }
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  border-bottom: 1px solid #1e1e1e;
+  background: #0e0e0e;
+}
+
+.dash-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 24px;
+  color: #c8f060;
+  font-family: 'DM Serif Display', serif;
+}
+
+.brand-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  color: #666;
+}
+
+.signout-btn {
+  background: none;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.signout-btn:hover { border-color: #c8f060; color: #c8f060; }
+
+.dash-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 48px;
+}
+
+.dash-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dash-top h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.new-doc-btn {
+  background: #c8f060;
+  color: #0e0e0e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.new-doc-btn:hover { opacity: 0.85; }
+
+.dash-empty {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.doc-card {
+  background: #131313;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.doc-card:hover {
+  border-color: #c8f060;
+  background: #161616;
+}
+
+.doc-card-icon {
+  font-size: 28px;
+  color: #c8f060;
+  font-family: 'DM Serif Display', serif;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.doc-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f0ede6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.doc-date {
+  font-size: 12px;
+  color: #555;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.doc-card:hover .doc-actions { opacity: 1; }
+
+.doc-actions button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  transition: color 0.2s;
+}
+
+.doc-actions button:hover { color: #c8f060; }
+
+.rename-input {
+  background: #1a1a1a;
+  border: 1px solid #c8f060;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #f0ede6;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+}
