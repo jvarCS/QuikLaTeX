@@ -5,7 +5,9 @@ const { exec } = require("child_process");
 const path = require("path");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "quiklatex-production.up.railway.app"
+}));
 app.use(express.json());
 
 app.post("/compile", (req, res) => {
