@@ -6,7 +6,7 @@ const path = require("path");
 
 const app = express();
 app.use(cors({
-    origin: "quiklatex-production.up.railway.app"
+    origin: "https://quiklatex.vercel.app"
 }));
 app.use(express.json());
 
