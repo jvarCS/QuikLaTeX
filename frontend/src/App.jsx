@@ -27,8 +27,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={!session ? <Landing /> : <Navigate to="/dashboard" />} />
         <Route path="/dashboard" element={session ? <Dashboard session={session} /> : <Navigate to="/" />} />
-        <Route path="/editor/:id" element={session ? <Editor /> : <Navigate to="/" />} />
         <Route path="/editor/guest" element={<Editor guest />} />
+        <Route path="/editor/:id" element={session ? <Editor /> : <Navigate to="/" />} />
         <Route path="/reset-password" element={<ResetPass />} />
         <Route path="/reset" element={<ResetLanding />} />
       </Routes>
