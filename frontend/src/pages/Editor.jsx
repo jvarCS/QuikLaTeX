@@ -99,12 +99,17 @@ export default function Editor({ guest }) {
       loadingTask.promise.then(pdf => {
         for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
           pdf.getPage(pageNum).then(page => {
-            const viewport = page.getViewport({ scale: 1.5 });
+            const containerWidth = containerRef.current.clientWidth;
+            const viewport = page.getViewport({ scale: 1 });
+            console.log("container:", containerWidth, "pdf:", viewport.width);
+            const scale = containerWidth / viewport.width;
+            const scaledViewport = page.getViewport({ scale });
+            
             const canvas = document.createElement("canvas");
-            canvas.width = viewport.width;
-            canvas.height = viewport.height;
+            canvas.width = scaledViewport.width;
+            canvas.height = scaledViewport.height;
             containerRef.current?.appendChild(canvas);
-            page.render({ canvasContext: canvas.getContext("2d"), viewport });
+            page.render({ canvasContext: canvas.getContext("2d"), viewport: scaledViewport });
           });
         }
       });
@@ -142,19 +147,19 @@ export default function Editor({ guest }) {
     e.target.value = "";
   };
 
-  const statusLabel = {
-    idle: "",
-    compiling: "Compiling...",
-    success: "Compiled ✓",
-    error: "Error",
-  };
+  // const statusLabel = {
+  //   idle: "",
+  //   compiling: "Compiling...",
+  //   success: "Compiled ✓",
+  //   error: "Error",
+  // };
 
   return (
     <div className="editor">
       {/* Header */}
       <header className="editor-header">
         <div className="editor-header-left">
-          <span className="brand-icon" onClick={() => guest? navigate("/") : navigate("/dashboard")}>∂</span>
+          <span className="brand-icon" onClick={() => guest? navigate("/") : navigate("/dashboard")}>Ϙ</span>
           {editingTitle ? (
             <input
               ref={titleInputRef}
@@ -209,9 +214,11 @@ export default function Editor({ guest }) {
       )}
 
       {/* Main split pane */}
+
+      {/* Editor pane*/}
       <div className="editor-body">
         <div className="editor-pane">
-          <div className="pane-label">LaTeX</div>
+          {/* <div className="pane-label">LaTeX</div> */}
           <textarea
             className="latex-editor"
             value={content}
@@ -220,19 +227,13 @@ export default function Editor({ guest }) {
           />
         </div>
 
-        <div className="divider" />
+        {/* <div className="divider" /> */}
 
         <div className="pdf-pane">
-          <div className="pane-label">
-            PDF Preview
-            <span className={`compile-status ${compileStatus}`}>
-              {statusLabel[compileStatus]}
-            </span>
-          </div>
           <div className="pdf-container" ref={containerRef}>
             {compileStatus === "idle" && (
               <div className="pdf-placeholder">
-                <span>∂</span>
+                <span>Ϙ</span>
                 <p>Click Compile to render your PDF</p>
               </div>
             )}
