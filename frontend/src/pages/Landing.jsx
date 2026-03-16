@@ -35,9 +35,9 @@ export default function Landing() {
         <p className="landing-tagline">
           Write LaTeX. Compile instantly.<br />Save everything to the cloud.
         </p>
-        <a href="/editor/guest" className="guest-link">
+        <Link to="/editor/guest" className="guest-link">
           Try without signing in →
-        </a>
+        </Link>
       </div>
 
       <div className="landing-right">
