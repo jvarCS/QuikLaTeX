@@ -11,7 +11,7 @@ export default function ResetLanding() {
     setError("");
     setLoading(true);
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: 'https://quiklatex.vercel.app/reset-password'
+      redirectTo: `${import.meta.env.VITE_APP_URL}/reset-password`
     });
     if (error) {
       setError(error.message);
