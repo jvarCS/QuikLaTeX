@@ -29,7 +29,7 @@ export default function Landing() {
     <div className="landing">
       <div className="landing-left">
         <div className="landing-brand">
-          <span className="brand-icon">∂</span>
+          <span className="brand-icon">Ϙ</span>
           <h1>QuikLaTeX</h1>
         </div>
         <p className="landing-tagline">

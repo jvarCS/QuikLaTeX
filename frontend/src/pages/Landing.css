@@ -2,9 +2,16 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --greyish: #80A1BA;
+  --ltgrn: #4A9782;
+  --drkgrn: #004030;
+  --pink: #F5D2D2;
+}
+
 body {
   font-family: 'DM Mono', monospace;
-  background: #0e0e0e;
+  background: var(--ltgrn);
   color: #f0ede6;
 }
 

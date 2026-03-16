@@ -6,7 +6,7 @@ const path = require("path");
 
 const app = express();
 app.use(cors({
-    origin: "https://quiklatex.vercel.app"
+    origin: ["https://quiklatex.vercel.app","http://localhost:5173"]
 }));
 app.use(express.json());
 
