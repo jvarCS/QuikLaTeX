@@ -7,12 +7,14 @@
   --ltgrn: #4A9782;
   --drkgrn: #004030;
   --pink: #F5D2D2;
+  --black: #0e0e0e;
+  --white: #f0ede6;
 }
 
 body {
   font-family: 'DM Mono', monospace;
-  /* background: var(--ltgrn); */
-  color: #f0ede6;
+  /* background: var(--white); */
+  color: var(--white);
 }
 
 .landing {
@@ -34,12 +36,14 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  color: var(--white);
   margin-bottom: 32px;
 }
 
-.brand-icon {
+.landing-brand .brand-icon {
   font-size: 48px;
-  color: #c8f060;
+  /* background-color: var(--white); */
+  color: var(--drkgrn);
   font-family: 'DM Serif Display', serif;
   line-height: 1;
 }
@@ -48,21 +52,21 @@ body {
   font-family: 'DM Serif Display', serif;
   font-size: 48px;
   font-weight: 400;
-  color: #f0ede6;
+  color: var(--white);
 }
 
 .landing-tagline {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.8;
-  color: #888;
+  color: var(--white);
   margin-bottom: 48px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .guest-link {
-  color: #c8f060;
+  color: var(--pink);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   transition: opacity 0.2s;
 }
@@ -74,7 +78,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #121212;
+  background: var(--drkgrn);
 }
 
 .auth-box {
@@ -85,7 +89,7 @@ body {
 }
 
 .auth-welcome {
-  color: #f0ede6;
+  color: var(--white);
   display: flex;
   gap: 16px;
   justify-content: space-between;
@@ -104,18 +108,18 @@ body {
   border: 1px solid #2a2a2a;
   border-radius: 6px;
   padding: 12px 16px;
-  color: #f0ede6;
+  color: var(--white);
   font-family: 'DM Mono', monospace;
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
 }
 
-.auth-box input:focus { border-color: #c8f060; }
+.auth-box input:focus { border-color: var(--pink); }
 
 .auth-btn {
-  background: #c8f060;
-  color: #0e0e0e;
+  background: var(--pink);
+  color: var(--black);
   border: none;
   border-radius: 6px;
   padding: 12px;
@@ -137,13 +141,13 @@ body {
 
 .auth-toggle {
   font-size: 13px;
-  color: #666;
+  color: var(--ltgrn);
   text-align: center;
 }
 
 .auth-toggle span,
 .auth-welcome span {
   position: relative;
-  color: #c8f060;
+  color: var(--pink);
   cursor: pointer;
 }
