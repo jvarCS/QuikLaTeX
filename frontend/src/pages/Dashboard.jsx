@@ -80,7 +80,7 @@ export default function Dashboard({ session }) {
     <div className="dashboard">
       <header className="dash-header">
         <div className="dash-brand">
-          <span className="brand-icon">∂</span>
+          <span className="brand-icon">Ϙ</span>
           <span className="brand-name">QuikLaTeX</span>
         </div>
         <div className="dash-user">
@@ -106,7 +106,7 @@ export default function Dashboard({ session }) {
           <div className="doc-grid">
             {documents.map(doc => (
               <div className="doc-card" key={doc.id} onClick={() => navigate(`/editor/${doc.id}`)}>
-                <div className="doc-card-icon">∂</div>
+                <div className="doc-card-icon">Ϙ</div>
                 <div className="doc-card-body">
                   {renaming === doc.id ? (
                     <input
