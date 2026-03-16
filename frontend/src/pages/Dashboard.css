@@ -2,6 +2,13 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --greyish: #80A1BA;
+  --ltgrn: #4A9782;
+  --drkgrn: #004030;
+  --pink: #F5D2D2;
+}
+
 body {
   font-family: 'DM Mono', monospace;
   background: #0e0e0e;
@@ -16,7 +23,7 @@ body {
   align-items: center;
   padding: 20px 48px;
   border-bottom: 1px solid #1e1e1e;
-  background: #0e0e0e;
+  background: var(--drkgrn);
 }
 
 .dash-brand {
@@ -25,9 +32,14 @@ body {
   gap: 10px;
 }
 
-.brand-icon {
+.dash-brand .brand-icon {
+  position: relative;
+  top: 4px;
+  left: -10px;
   font-size: 24px;
-  color: #c8f060;
+  /* font-weight: 200; */
+  color: var(--ltgrn);
+  /* height: fit-content; */
   font-family: 'DM Serif Display', serif;
 }
 
@@ -42,7 +54,7 @@ body {
   align-items: center;
   gap: 20px;
   font-size: 13px;
-  color: #666;
+  color: #999;
 }
 
 .signout-btn {
@@ -57,7 +69,7 @@ body {
   transition: all 0.2s;
 }
 
-.signout-btn:hover { border-color: #c8f060; color: #c8f060; }
+.signout-btn:hover { border-color: var(--pink); color: var(--pink); }
 
 .dash-main {
   max-width: 960px;
@@ -79,7 +91,7 @@ body {
 }
 
 .new-doc-btn {
-  background: #c8f060;
+  background: var(--pink);
   color: #0e0e0e;
   border: none;
   padding: 10px 20px;
@@ -111,7 +123,7 @@ body {
 }
 
 .doc-card {
-  background: #131313;
+  background: var(--drkgrn);
   border: 1px solid #1e1e1e;
   border-radius: 8px;
   padding: 20px;
@@ -124,13 +136,13 @@ body {
 }
 
 .doc-card:hover {
-  border-color: #c8f060;
-  background: #161616;
+  border-color: var(--pink);
+  /* background: #161616; */
 }
 
 .doc-card-icon {
   font-size: 28px;
-  color: #c8f060;
+  color: var(--ltgrn);
   font-family: 'DM Serif Display', serif;
   line-height: 1;
   flex-shrink: 0;
@@ -175,11 +187,11 @@ body {
   transition: color 0.2s;
 }
 
-.doc-actions button:hover { color: #c8f060; }
+.doc-actions button:hover { color: var(--pink); }
 
 .rename-input {
   background: #1a1a1a;
-  border: 1px solid #c8f060;
+  border: 1px solid var(--pink);
   border-radius: 4px;
   padding: 4px 8px;
   color: #f0ede6;
