@@ -84,7 +84,7 @@ export default function Dashboard({ session }) {
           <span className="brand-name">QuikLaTeX</span>
         </div>
         <div className="dash-user">
-          {/* <span>{session.user.email}</span> */}
+          <span>{session.user.email}</span>
           <button className="signout-btn" onClick={signOut}>Sign out</button>
         </div>
       </header>
