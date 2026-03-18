@@ -73,7 +73,7 @@ body ::-webkit-scrollbar {
   font-family: 'DM Mono', monospace;
   font-size: 14px;
   background: #1a1a1a;
-  border: 1px solid #c8f060;
+  border: 1px solid var(--pink);
   color: #f0ede6;
   padding: 4px 8px;
   border-radius: 4px;
@@ -268,12 +268,8 @@ body ::-webkit-scrollbar {
 }
 
 .pdf-container canvas {
-  /* width: fit-content; */
-  /* max-width: 100%; */
   display: block;
   height: auto;
-  /* border-left: fill solid var(--ltgrn); */
-  /* padding-right: 10px; */
 }
 
 .pdf-container canvas:not(:last-child) {
